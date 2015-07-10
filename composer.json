@@ -1,0 +1,31 @@
+{
+    "name":              "werkint/command-bundle",
+    "description":       "Bundle for enhanced commands",
+    "license":           "GPL-3.0+",
+    "authors":           [
+        {
+            "name":  "Bogdan Yurov",
+            "email": "bogdan@yurov.me"
+        }
+    ],
+    "require":           {
+        "symfony/framework-bundle": "*",
+        "symfony/console":          "*",
+        "werkint/object-routing":   "*",
+        "werkint/mutex-bundle":     "*",
+
+        "php":                      ">=5.5"
+    },
+    "autoload":          {
+        "psr-4": {
+            "Werkint\\Bundle\\CommandBundle\\": "src/"
+        }
+    },
+    "extra":             {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    },
+
+    "minimum-stability": "dev"
+}

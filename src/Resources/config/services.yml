@@ -1,0 +1,25 @@
+parameters:
+  werkint_command.stuffprocessor:
+    Werkint\Bundle\CommandBundle\Service\Processor\Stuff\StuffProcessor
+
+services:
+  # Задачи по crond
+  werkint_command.stuff:
+    class: %werkint_command.stuffprocessor%
+    arguments:
+      - @werkint_mutex.mutexmanager
+      - @werkint_command.stuff.locks
+  werkint_command.stuff.locks:
+    class: Werkint\Bundle\CommandBundle\Service\Processor\Stuff\Locks
+    tags:
+      - { name: werkint.redis.cache, scope: root, ns: werkint_stuff }
+  werkint_command.stuff.compileprovider:
+    class: Werkint\Bundle\CommandBundle\Service\Processor\Stuff\CompileProvider
+    arguments:
+      - @werkint_command.stuff
+    tags:
+      - { name: werkint.compile.provider, class: werkint.stuff, priority: -100 }
+
+  # Компиляция ресурсов
+  werkint_command.compile:
+    class: Werkint\Bundle\CommandBundle\Service\Processor\Compile\CompileProcessor
