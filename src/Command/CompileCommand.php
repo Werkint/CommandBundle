@@ -56,6 +56,6 @@ class CompileCommand extends ContainerAwareCommand
      */
     protected function serviceCompile()
     {
-        return $this->getContainer()->get('werkint.command.processor.compile');
+        return $this->getContainer()->get('werkint_command.compile');
     }
 }

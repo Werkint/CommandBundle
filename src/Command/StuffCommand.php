@@ -61,7 +61,7 @@ class StuffCommand extends ContainerAwareCommand
      */
     protected function serviceStuff()
     {
-        return $this->getContainer()->get('werkint.command.processor.stuff');
+        return $this->getContainer()->get('werkint_command.stuff');
     }
 
     // -- Hacks ---------------------------------------
