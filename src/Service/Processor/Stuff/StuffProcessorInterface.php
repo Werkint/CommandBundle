@@ -2,7 +2,7 @@
 namespace Werkint\Bundle\CommandBundle\Service\Processor\Stuff;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
-use Werkint\Bundle\CommandBundle\Service\Logger\IndentedLoggerInterface;
+use Werkint\Bundle\FrameworkExtraBundle\Service\Logger\IndentedLoggerInterface;
 
 /**
  * StuffProcessorInterface.

@@ -4,8 +4,8 @@ namespace Werkint\Bundle\CommandBundle\Command;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Werkint\Bundle\CommandBundle\Service\Logger\IndentedLogger;
 use Werkint\Bundle\CommandBundle\Service\Processor\Compile\CompileProcessorInterface;
+use Werkint\Bundle\FrameworkExtraBundle\Service\Logger\IndentedLogger;
 
 /**
  * CompileCommand.

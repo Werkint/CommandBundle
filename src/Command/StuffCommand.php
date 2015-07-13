@@ -5,8 +5,8 @@ use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Werkint\Bundle\CommandBundle\Service\Logger\IndentedLogger;
 use Werkint\Bundle\CommandBundle\Service\Processor\Stuff\StuffProcessorInterface;
+use Werkint\Bundle\FrameworkExtraBundle\Service\Logger\IndentedLogger;
 
 /**
  * StuffCommand.

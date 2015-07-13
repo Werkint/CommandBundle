@@ -2,9 +2,9 @@
 namespace Werkint\Bundle\CommandBundle\Service\Processor\Stuff;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
-use Werkint\Bundle\CommandBundle\Service\Logger\IndentedLoggerInterface;
 use Werkint\Bundle\CommandBundle\Service\Processor\Stuff\Exception\NoProvidersException;
 use Werkint\Bundle\CommandBundle\Service\Processor\Stuff\Exception\ProviderNotFoundException;
+use Werkint\Bundle\FrameworkExtraBundle\Service\Logger\IndentedLoggerInterface;
 use Werkint\Bundle\MutexBundle\Service\MutexManagerInterface;
 
 /**

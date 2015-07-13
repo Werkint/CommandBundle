@@ -6,5 +6,6 @@ namespace Werkint\Bundle\CommandBundle\Service\Processor\Stuff\Exception;
  *
  * @author Bogdan Yurov <bogdan@yurov.me>
  */
-class NoProvidersException extends \Exception {
+class NoProvidersException extends \Exception
+{
 }

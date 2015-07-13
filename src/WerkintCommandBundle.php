@@ -1,8 +1,8 @@
 <?php
 namespace Werkint\Bundle\CommandBundle;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  * WerkintCommandBundle.

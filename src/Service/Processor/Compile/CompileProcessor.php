@@ -2,12 +2,8 @@
 namespace Werkint\Bundle\CommandBundle\Service\Processor\Compile;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
-use Symfony\Component\Console\Output\ConsoleOutput;
-use Symfony\Component\Console\Output\NullOutput;
-use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Output\StreamOutput;
-use Werkint\Bundle\CommandBundle\Service\Logger\IndentedLoggerInterface;
 use Werkint\Bundle\CommandBundle\Service\Processor\Compile\Exception\ProviderNotFoundException;
+use Werkint\Bundle\FrameworkExtraBundle\Service\Logger\IndentedLoggerInterface;
 
 /**
  * CompileProcessor.
