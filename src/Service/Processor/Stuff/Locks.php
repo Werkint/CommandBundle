@@ -1,35 +1,37 @@
 <?php
 namespace Werkint\Bundle\CommandBundle\Service\Processor\Stuff;
 
-use Doctrine\Common\Cache\CacheProvider;
+use Werkint\Bundle\CacheBundle\Service\Annotation\CacheAware;
+use Werkint\Bundle\CacheBundle\Service\Contract\CacheAwareInterface;
+use Werkint\Bundle\CacheBundle\Service\Contract\CacheAwareTrait;
 
 /**
- * Locks.
+ * TODO: remove
  *
  * @author Bogdan Yurov <bogdan@yurov.me>
+ *
+ * @CacheAware(namespace="werkint_stuff.locks")
  */
-class Locks
+class Locks implements
+    CacheAwareInterface
 {
-    protected $cacher;
-    protected $ticks;
+    use CacheAwareTrait;
 
-    public function __construct(
-        CacheProvider $cacher
-    ) {
-        $this->cacher = $cacher;
-
-        $this->ticks = (int)$this->cacher->fetch('ticks');
-    }
+    protected $ticks = null;
 
     public function getTicks()
     {
+        if ($this->ticks === null) {
+            $this->ticks = (int)$this->cacheProvider->fetch('ticks');
+        }
+
         return $this->ticks;
     }
 
     public function addTick()
     {
         $this->ticks++;
-        $this->cacher->save('ticks', $this->ticks);
+        $this->cacheProvider->save('ticks', $this->ticks);
 
         return $this->getTicks();
     }

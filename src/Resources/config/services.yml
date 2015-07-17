@@ -17,8 +17,6 @@ services:
       - @werkint_command.stuff.locks
   werkint_command.stuff.locks:
     class: %werkint_command.stuff.locks.class%
-    tags:
-      - { name: werkint.redis.cache, scope: root, ns: werkint_stuff }
   werkint_command.stuff.compileprovider:
     class: %werkint_command.stuff.compileprovider.class%
     arguments:
